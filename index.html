@@ -3,153 +3,118 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>YourStore Lebanon</title>
+<title>Lebanon Phone Store</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 
 <style>
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 body {
+    margin: 0;
     font-family: 'Poppins', sans-serif;
-    background: #f9fafb;
-    color: #111;
+    background: #f4f6f8;
 }
 
 /* HEADER */
 header {
+    background: white;
+    padding: 15px;
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    padding: 15px 25px;
-    background: white;
     border-bottom: 1px solid #eee;
     position: sticky;
     top: 0;
-    z-index: 100;
 }
 
 .logo {
     font-weight: 700;
-    font-size: 20px;
 }
 
-.nav {
+/* CATEGORIES */
+.categories {
+    display: flex;
+    gap: 10px;
+    overflow-x: auto;
+    padding: 15px;
+    background: white;
+}
+
+.cat {
+    padding: 8px 15px;
+    background: #eee;
+    border-radius: 20px;
+    white-space: nowrap;
     font-size: 14px;
-    color: gray;
-}
-
-/* HERO */
-.hero {
-    text-align: center;
-    padding: 60px 20px;
-    background: linear-gradient(to right, #000, #333);
-    color: white;
-}
-
-.hero h1 {
-    font-size: 32px;
-    margin-bottom: 10px;
-}
-
-.hero p {
-    opacity: 0.8;
+    cursor: pointer;
 }
 
 /* GRID */
 .grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
-    padding: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 15px;
+    padding: 15px;
 }
 
 /* CARD */
 .card {
     background: white;
-    border-radius: 15px;
+    border-radius: 12px;
     overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
     transition: 0.3s;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
 }
 
 .card:hover {
     transform: translateY(-5px);
 }
 
-/* IMAGE */
 .card img {
     width: 100%;
-    height: 200px;
+    height: 160px;
     object-fit: cover;
 }
 
-/* CONTENT */
 .card-content {
-    padding: 15px;
-}
-
-.card h3 {
-    font-size: 18px;
+    padding: 10px;
 }
 
 .price {
-    color: #16a34a;
+    color: green;
     font-weight: 600;
-    margin: 5px 0;
 }
 
-/* BUTTON */
-.btn {
-    display: block;
-    background: #000;
+/* BUTTONS */
+.buttons {
+    display: flex;
+    gap: 5px;
+    margin-top: 10px;
+}
+
+.buy {
+    flex: 1;
+    background: black;
     color: white;
     text-align: center;
-    padding: 10px;
-    margin-top: 10px;
-    border-radius: 8px;
+    padding: 8px;
+    border-radius: 6px;
     text-decoration: none;
-    transition: 0.3s;
+    font-size: 13px;
 }
 
-.btn:hover {
-    background: #16a34a;
+.cart {
+    flex: 1;
+    background: #ddd;
+    color: black;
+    text-align: center;
+    padding: 8px;
+    border-radius: 6px;
+    font-size: 13px;
 }
 
 /* SECTION */
 .section {
-    padding: 50px 20px;
     text-align: center;
-}
-
-.section h2 {
-    margin-bottom: 10px;
-}
-
-/* FEATURES */
-.features {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-    margin-top: 20px;
-}
-
-.feature {
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    width: 200px;
-}
-
-/* FOOTER */
-.footer {
-    text-align: center;
-    padding: 20px;
+    padding: 30px;
     color: gray;
 }
 </style>
@@ -158,68 +123,68 @@ header {
 <body>
 
 <header>
-    <div class="logo">📱 YourStore</div>
-    <div class="nav">Lebanon 🇱🇧</div>
+    <div class="logo">📱 Lebanon Store</div>
+    <div>🇱🇧</div>
 </header>
 
-<!-- HERO -->
-<div class="hero">
-    <h1>Premium Smartphones</h1>
-    <p>Best prices in Lebanon · Cash on Delivery</p>
+<!-- CATEGORIES -->
+<div class="categories">
+    <div class="cat">All</div>
+    <div class="cat">Phones</div>
+    <div class="cat">Covers</div>
+    <div class="cat">Accessories</div>
+    <div class="cat">Tablets</div>
 </div>
 
 <!-- PRODUCTS -->
 <div class="grid">
 
+    <!-- PHONE -->
     <div class="card">
         <img src="https://images.unsplash.com/photo-1603899122513-2c1a1a6b7c2e">
         <div class="card-content">
             <h3>iPhone 13</h3>
             <p class="price">$600</p>
-            <a class="btn" href="https://wa.me/961XXXXXXXX?text=I want iPhone 13">Order Now</a>
+
+            <div class="buttons">
+                <a class="buy" href="https://wa.me/961XXXXXXXX?text=I want iPhone 13">Buy</a>
+                <div class="cart">+ Cart</div>
+            </div>
         </div>
     </div>
 
+    <!-- COVER -->
     <div class="card">
-        <img src="https://images.unsplash.com/photo-1610945265064-0e34e5519bbf">
+        <img src="https://images.unsplash.com/photo-1601593346740-925612772716">
         <div class="card-content">
-            <h3>Samsung S22</h3>
-            <p class="price">$500</p>
-            <a class="btn" href="https://wa.me/961XXXXXXXX?text=I want Samsung S22">Order Now</a>
+            <h3>Phone Cover</h3>
+            <p class="price">$10</p>
+
+            <div class="buttons">
+                <a class="buy" href="https://wa.me/961XXXXXXXX?text=I want phone cover">Buy</a>
+                <div class="cart">+ Cart</div>
+            </div>
         </div>
     </div>
 
+    <!-- ACCESSORY -->
     <div class="card">
-        <img src="https://images.unsplash.com/photo-1598327105666-5b89351aff97">
+        <img src="https://images.unsplash.com/photo-1583394838336-acd977736f90">
         <div class="card-content">
-            <h3>Xiaomi 13</h3>
-            <p class="price">$400</p>
-            <a class="btn" href="https://wa.me/961XXXXXXXX?text=I want Xiaomi 13">Order Now</a>
+            <h3>AirPods Style</h3>
+            <p class="price">$25</p>
+
+            <div class="buttons">
+                <a class="buy" href="https://wa.me/961XXXXXXXX?text=I want AirPods">Buy</a>
+                <div class="cart">+ Cart</div>
+            </div>
         </div>
     </div>
 
 </div>
 
-<!-- WHY US -->
 <div class="section">
-    <h2>Why Choose Us</h2>
-
-    <div class="features">
-        <div class="feature">✔ Original Products</div>
-        <div class="feature">🚚 Fast Delivery</div>
-        <div class="feature">💰 Best Prices</div>
-    </div>
-</div>
-
-<!-- CONTACT -->
-<div class="section">
-    <h2>Contact</h2>
-    <p>WhatsApp: +961 XXXXXXXX</p>
-    <p>Instagram: @yourstore</p>
-</div>
-
-<div class="footer">
-    © 2026 YourStore Lebanon
+    © 2026 Lebanon Store | WhatsApp Orders Available 24/7
 </div>
 
 </body>
