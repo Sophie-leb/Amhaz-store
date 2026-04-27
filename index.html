@@ -1,191 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Lebanon Phone Store</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
-
-<style>
-body {
-    margin: 0;
-    font-family: 'Poppins', sans-serif;
-    background: #f4f6f8;
-}
-
-/* HEADER */
-header {
-    background: white;
-    padding: 15px;
-    display: flex;
-    justify-content: space-between;
-    border-bottom: 1px solid #eee;
-    position: sticky;
-    top: 0;
-}
-
-.logo {
-    font-weight: 700;
-}
-
-/* CATEGORIES */
-.categories {
-    display: flex;
-    gap: 10px;
-    overflow-x: auto;
-    padding: 15px;
-    background: white;
-}
-
-.cat {
-    padding: 8px 15px;
-    background: #eee;
-    border-radius: 20px;
-    white-space: nowrap;
-    font-size: 14px;
-    cursor: pointer;
-}
-
-/* GRID */
-.grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    gap: 15px;
-    padding: 15px;
-}
-
-/* CARD */
-.card {
-    background: white;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-    transition: 0.3s;
-}
-
-.card:hover {
-    transform: translateY(-5px);
-}
-
-.card img {
-    width: 100%;
-    height: 160px;
-    object-fit: cover;
-}
-
-.card-content {
-    padding: 10px;
-}
-
-.price {
-    color: green;
-    font-weight: 600;
-}
-
-/* BUTTONS */
-.buttons {
-    display: flex;
-    gap: 5px;
-    margin-top: 10px;
-}
-
-.buy {
-    flex: 1;
-    background: black;
-    color: white;
-    text-align: center;
-    padding: 8px;
-    border-radius: 6px;
-    text-decoration: none;
-    font-size: 13px;
-}
-
-.cart {
-    flex: 1;
-    background: #ddd;
-    color: black;
-    text-align: center;
-    padding: 8px;
-    border-radius: 6px;
-    font-size: 13px;
-}
-
-/* SECTION */
-.section {
-    text-align: center;
-    padding: 30px;
-    color: gray;
-}
-</style>
+  <meta charset="UTF-8">
+  <title>My Phone Store</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
 <header>
-    <div class="logo">📱 Lebanon Store</div>
-    <div>🇱🇧</div>
+  <h1>📱 My Phone Store</h1>
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">Phones</a>
+    <a href="#">Accessories</a>
+    <a href="#">Contact</a>
+  </nav>
 </header>
 
-<!-- CATEGORIES -->
-<div class="categories">
-    <div class="cat">All</div>
-    <div class="cat">Phones</div>
-    <div class="cat">Covers</div>
-    <div class="cat">Accessories</div>
-    <div class="cat">Tablets</div>
-</div>
+<section class="hero">
+  <h2>Best Phones in Lebanon</h2>
+  <p>iPhone • Samsung • Accessories • Best Prices</p>
+</section>
 
-<!-- PRODUCTS -->
-<div class="grid">
+<section class="products">
 
-    <!-- PHONE -->
-    <div class="card">
-        <img src="https://images.unsplash.com/photo-1603899122513-2c1a1a6b7c2e">
-        <div class="card-content">
-            <h3>iPhone 13</h3>
-            <p class="price">$600</p>
+  <div class="card">
+    <img src="https://via.placeholder.com/200" />
+    <h3>iPhone 15 Pro</h3>
+    <p>$999</p>
+    <button onclick="buy('iPhone 15 Pro')">Buy Now</button>
+  </div>
 
-            <div class="buttons">
-                <a class="buy" href="https://wa.me/961XXXXXXXX?text=I want iPhone 13">Buy</a>
-                <div class="cart">+ Cart</div>
-            </div>
-        </div>
-    </div>
+  <div class="card">
+    <img src="https://via.placeholder.com/200" />
+    <h3>Samsung S24</h3>
+    <p>$899</p>
+    <button onclick="buy('Samsung S24')">Buy Now</button>
+  </div>
 
-    <!-- COVER -->
-    <div class="card">
-        <img src="https://images.unsplash.com/photo-1601593346740-925612772716">
-        <div class="card-content">
-            <h3>Phone Cover</h3>
-            <p class="price">$10</p>
+  <div class="card">
+    <img src="https://via.placeholder.com/200" />
+    <h3>AirPods Pro</h3>
+    <p>$199</p>
+    <button onclick="buy('AirPods Pro')">Buy Now</button>
+  </div>
 
-            <div class="buttons">
-                <a class="buy" href="https://wa.me/961XXXXXXXX?text=I want phone cover">Buy</a>
-                <div class="cart">+ Cart</div>
-            </div>
-        </div>
-    </div>
+</section>
 
-    <!-- ACCESSORY -->
-    <div class="card">
-        <img src="https://images.unsplash.com/photo-1583394838336-acd977736f90">
-        <div class="card-content">
-            <h3>AirPods Style</h3>
-            <p class="price">$25</p>
+<footer>
+  <p>© 2026 My Phone Store - Lebanon</p>
+</footer>
 
-            <div class="buttons">
-                <a class="buy" href="https://wa.me/961XXXXXXXX?text=I want AirPods">Buy</a>
-                <div class="cart">+ Cart</div>
-            </div>
-        </div>
-    </div>
-
-</div>
-
-<div class="section">
-    © 2026 Lebanon Store | WhatsApp Orders Available 24/7
-</div>
-
+<script src="script.js"></script>
 </body>
 </html>
